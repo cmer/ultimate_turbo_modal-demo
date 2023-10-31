@@ -46,9 +46,8 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
-    @post.destroy
     redirect_to "/",
-                notice: "Post was successfully destroyed.",
+                notice: "Post was successfully destroyed. (but not really)",
                 status: :see_other
   end
 

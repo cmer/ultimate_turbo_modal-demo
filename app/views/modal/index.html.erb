@@ -1,17 +1,32 @@
-<div class="flex flex-wrap gap-2">
-  <%= link_to "Open Modal", post_path(@post), class: button_classes, data: {turbo_frame: "modal"} %>
-  <%= link_to "Open Modal (new post)", new_post_path(Post.new), class: button_classes, data: {turbo_frame: "modal"} %>
-  <%= link_to "Open Modal (advance history)", post_path(@post, advance: "1"), class: button_classes, data: {turbo_frame: "modal"} %>
-  <%= link_to "Open Modal (no padding)", modal_path(:photo, padding: 0, advance: 1), class: button_classes, data: {turbo_frame: "modal"} %>
-  <%= link_to "Open Scrolling Modal", modal_path(:long, advance: 1), class: button_classes, data: {turbo_frame: "modal"} %>
-  <%= link_to "Close From Backend", new_hide_from_backend_path, class: button_classes, data: {turbo_frame: "modal"} %>
-</div>
-
-<div class="my-10 font-medium text-lg">
+<div class="text-lg fixed left-3 bottom-3 text-gray-600">
   Rendered at <%= Time.now %>
 </div>
 
 <%= render partial: "hide_from_backends/notice" %>
+
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+  <div class="mx-auto max-w-3xl space-y-24">
+    <div>
+      <h1 class="<%= h1_classes %>">CRUD modals</h1>
+      <ul class="list-disc ml-6">
+        <li class="py-2"><%= link_to "Show Post", post_path(@post), data: {turbo_frame: "modal"} %>
+        <li class="py-2"><%= link_to "New Post", new_post_path(Post.new), data: {turbo_frame: "modal"} %>
+        <li class="py-2"><%= link_to "Show Post (advance history)", post_path(@post, advance: "1"), data: {turbo_frame: "modal"} %>
+      </ul>
+    </div>
+
+    <div>
+      <h1 class="<%= h1_classes %>">More modals</h1>
+      <ul class="list-disc ml-6">
+        <li class="py-2"><%= link_to "Photo with no padding", modal_path(:photo, padding: 0, advance: 1), data: {turbo_frame: "modal"} %>
+        <li class="py-2"><%= link_to "Long scrolling content", modal_path(:long, advance: 1), data: {turbo_frame: "modal"} %>
+        <li class="py-2"><%= link_to "Form closing from backend on success", new_hide_from_backend_path, data: {turbo_frame: "modal"} %>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
 <div class="mx-auto text-center">
   <% 30.times do %>
@@ -21,4 +36,6 @@
   <% end %>
 </div>
 
-<div class="my-8"><%= link_to "Open Modal", post_path(@post), class: button_classes, data: {turbo_frame: "modal"} %></div>
+<div class="my-20 text-center">
+  <%= link_to "Click for a unicat", modal_path(:photo, padding: 0, advance: 1), class: button_classes, data: {turbo_frame: "modal"} %>
+</div>

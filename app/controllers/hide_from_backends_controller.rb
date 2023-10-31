@@ -21,7 +21,7 @@ class HideFromBackendsController < ApplicationController
       # A message will appear in the browser, and the backend
       # will trigger a modal close via turbo stream.
     else
-      # if not insude a modal, simply redirect
+      # if not inside a modal, simply redirect
       redirect_to("/")
     end
   end
