@@ -1,5 +1,5 @@
 <% if local_assigns[:message] %>
-  <div id="#ts-notice" class="border p-2 my-10 font-medium text-lg"><%= local_assigns[:message] %></div>
+  <div id="#ts-notice" class="fixed top-2 right-2 w-auto border p-4 my-10 text-black border-green-800 bg-green-200 max-w-lg"><%= local_assigns[:message] %></div>
 <% else %>
   <div id="#ts-notice"></div>
 <% end %>
