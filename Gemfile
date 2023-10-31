@@ -39,4 +39,4 @@ end
 
 gem "importmap-rails"
 gem "faker"
-gem "ultimate_turbo_modal", path: "../ultimate_turbo_modal"
+gem "ultimate_turbo_modal"

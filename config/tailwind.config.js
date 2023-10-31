@@ -15,8 +15,8 @@ module.exports = {
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim,rb}'
-    // getUltimateTurboModalPath()
+    './app/views/**/*.{erb,haml,html,slim,rb}',
+    getUltimateTurboModalPath()
   ],
   theme: {
     extend: {
