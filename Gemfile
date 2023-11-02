@@ -39,5 +39,5 @@ end
 
 gem "importmap-rails"
 gem "faker"
-gem "ultimate_turbo_modal", "~> 1.1.1"
+gem "ultimate_turbo_modal", "~> 1.1.2"
 # gem "ultimate_turbo_modal", path: "../ultimate_turbo_modal-rails"
