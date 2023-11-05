@@ -21,9 +21,6 @@ gem "sqlite3", "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 6.0"
 
-# Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem "tailwindcss-rails"
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
@@ -37,6 +34,7 @@ group :development do
   # gem "spring"
 end
 
+gem "cssbundling-rails", "~> 1.3.3"
 gem "jsbundling-rails", "~> 1.2"
 gem "faker"
 gem "ultimate_turbo_modal", "~> 1.2.0"

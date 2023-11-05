@@ -1,0 +1,6 @@
+/* Entry point for your PostCSS build */
+
+@import "ultimate_turbo_modal/dist/index.css" layer(components);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
