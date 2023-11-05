@@ -1,21 +1,21 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 // With npm/yarn
-// const { getUltimateTurboModalPath } = require('ultimate_turbo_modal/gemPath');
+const { getUltimateTurboModalPath } = require('ultimate_turbo_modal/gemPath');
 
 // With importmaps
-const { execSync } = require('child_process');
+// const { execSync } = require('child_process');
 
-function getUltimateTurboModalPath() {
-  const path = execSync('bundle show ultimate_turbo_modal').toString().trim();
-  return `${path}/**/*.{erb,html,rb}`;
-}
+// function getUltimateTurboModalPath() {
+//   const path = execSync('bundle show ultimate_turbo_modal').toString().trim();
+//   return `${path}/**/*.{erb,html,rb}`;
+// }
 
 module.exports = {
   content: [
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim,rb}',
+    './app/views/**/*.{erb,haml,html,slim,rb}'
     getUltimateTurboModalPath()
   ],
   theme: {
@@ -25,6 +25,7 @@ module.exports = {
       },
     },
   },
+  darkMode: 'class',
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),

@@ -4,4 +4,8 @@ class ModalController < ApplicationController
   def index
     @post = Post.first
   end
+
+  def show
+    @header = !(params[:id] == "photo")
+  end
 end

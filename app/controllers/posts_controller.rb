@@ -9,15 +9,18 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
+    @modal_title = @post.title
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    @modal_title = "New Post"
   end
 
   # GET /posts/1/edit
   def edit
+    @modal_title = "Edit Post"
   end
 
   # POST /posts

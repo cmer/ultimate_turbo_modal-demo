@@ -1,17 +1,7 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import { Turbo } from "@hotwired/turbo-rails";
-import "controllers";
+import "./controllers";
 
 window.Turbo = Turbo;
-
-// Handle frame-missing events gracefully for redirects, like in Turbo 7.2
-// document.addEventListener("turbo:frame-missing", function (event) {
-//   if (event.detail.response.redirected &&
-//     event.target == document.querySelector("turbo-frame#modal")) {
-//     event.preventDefault()
-//     event.detail.visit(event.detail.response)
-//   }
-// })
 
 // Morph Turbo Frame rendering to allow navigation within Turbo Frames
 // without having to teardown the entire frame. This is needed to prevent

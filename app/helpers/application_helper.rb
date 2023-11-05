@@ -1,6 +1,6 @@
 module ApplicationHelper
   def h1_classes
-    "text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl border-b mb-2"
+    "text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl border-b mb-2 dark:text-white"
   end
 
   def button_classes

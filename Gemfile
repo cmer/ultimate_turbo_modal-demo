@@ -37,7 +37,7 @@ group :development do
   # gem "spring"
 end
 
-gem "importmap-rails"
+gem "jsbundling-rails", "~> 1.2"
 gem "faker"
-gem "ultimate_turbo_modal", "~> 1.1.2"
+gem "ultimate_turbo_modal", "~> 1.2.0"
 # gem "ultimate_turbo_modal", path: "../ultimate_turbo_modal-rails"

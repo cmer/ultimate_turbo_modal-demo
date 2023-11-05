@@ -3,4 +3,7 @@ UltimateTurboModal.configure do |config|
   config.padding = true
   config.advance = true
   config.flavor = :tailwind
+  config.header = true
+  config.header_divider = true
+  config.footer_divider = true
 end
