@@ -181,7 +181,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    ultimate_turbo_modal (1.2.0)
+    ultimate_turbo_modal (1.2.1)
       phlex-rails (>= 1.0, < 2.0)
       rails (>= 7)
       stimulus-rails
@@ -206,7 +206,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
-  ultimate_turbo_modal (~> 1.2.0)
+  ultimate_turbo_modal (~> 1.2.1)
 
 RUBY VERSION
    ruby 3.2.0p0
