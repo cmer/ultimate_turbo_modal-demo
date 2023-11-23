@@ -1,4 +1,4 @@
-<%= modal(padding: @padding, advance: @override_url || @advance, header: @header) do %>
+<%= modal(padding: @padding, advance: @override_url || @advance, header: @header, close_button: @close_button) do %>
   <% unless inside_modal? %>
     <h1 class="text-2xl mb-8">This is not inside a modal</h1>
   <% end %>

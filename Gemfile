@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.0"
+ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
@@ -37,5 +37,5 @@ end
 gem "cssbundling-rails", "~> 1.3.3"
 gem "jsbundling-rails", "~> 1.2"
 gem "faker"
-gem "ultimate_turbo_modal", "~> 1.2.1"
-# gem "ultimate_turbo_modal", path: "../ultimate_turbo_modal-rails"
+gem "ultimate_turbo_modal", "~> 1.3.0"
+#gem "ultimate_turbo_modal", path: "../ultimate_turbo_modal-rails"
