@@ -993,10 +993,10 @@ ts-interface-checker@^0.1.9:
   resolved "https://registry.yarnpkg.com/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz#784fd3d679722bc103b1b4b8030bcddb5db2a699"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
-ultimate_turbo_modal@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/ultimate_turbo_modal/-/ultimate_turbo_modal-1.2.1.tgz#28865cdf9785a4ec55067fbd28d774f2d74ecd41"
-  integrity sha512-dpM6k484SK65l77msr/H+sRr7EadrFwhFejMBTnWStjms80/4tZwOh9H5BBOMnr9I0s5o5Mfy1taEUz/vWX5pw==
+ultimate_turbo_modal@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/ultimate_turbo_modal/-/ultimate_turbo_modal-1.4.1.tgz#dc23558656b1ad4dc2db1b4a4da426385c7b9c89"
+  integrity sha512-e4NG0Srsb5n877D/aNeOD9un09grxOILiHUaAw2BI1F5tAdLuph6AwU99Si+prj0TJ4WKZ2lyVifGP6SgvsVBg==
   dependencies:
     "@hotwired/stimulus" "^3.2.2"
     "@hotwired/turbo-rails" "^7.3.0"
