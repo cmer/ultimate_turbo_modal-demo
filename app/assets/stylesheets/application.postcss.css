@@ -1,5 +1,6 @@
 /* Entry point for your PostCSS build */
 @import "ultimate_turbo_modal/dist/vanilla.css" layer(components);
+@import "flatpickr/dist/flatpickr.css";
 
 @tailwind base;
 @tailwind components;

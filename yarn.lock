@@ -122,7 +122,7 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.5.tgz#faad84c41ba12e3a0acb52571df9bff37bee75f6"
   integrity sha512-czTrygUsB/jlM8qEW5MD8bgYU2Xg14lo6kBDXW6HdxKjh8M5PzETGiSHaz9MtbXBYDloHNUAUW2tMiKW4KM9Mw==
 
-"@hotwired/stimulus@^3.2.2":
+"@hotwired/stimulus@^3.0.0", "@hotwired/stimulus@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.2.2.tgz#071aab59c600fed95b97939e605ff261a4251608"
   integrity sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A==
@@ -452,6 +452,11 @@ fill-range@^7.0.1:
   integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
   dependencies:
     to-regex-range "^5.0.1"
+
+flatpickr@^4.6.13:
+  version "4.6.13"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.13.tgz#8a029548187fd6e0d670908471e43abe9ad18d94"
+  integrity sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==
 
 fraction.js@^4.3.6:
   version "4.3.7"
@@ -900,6 +905,13 @@ source-map-js@^1.0.2:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
+stimulus-flatpickr@^3.0.0-0:
+  version "3.0.0-0"
+  resolved "https://registry.yarnpkg.com/stimulus-flatpickr/-/stimulus-flatpickr-3.0.0-0.tgz#af9bfa70bd1b74654312580101387c9d13ee32f2"
+  integrity sha512-TLfxen1OS+3Jy594+VmYkJz/IRaH5wqxxdbVB1aalS1+3EJgy/shqB/Fd4ttKWC8EIOVd8Pzx22oVnjNep3mTA==
+  dependencies:
+    "@hotwired/stimulus" "^3.0.0"
+
 string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
@@ -993,10 +1005,10 @@ ts-interface-checker@^0.1.9:
   resolved "https://registry.yarnpkg.com/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz#784fd3d679722bc103b1b4b8030bcddb5db2a699"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
-ultimate_turbo_modal@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/ultimate_turbo_modal/-/ultimate_turbo_modal-1.4.1.tgz#dc23558656b1ad4dc2db1b4a4da426385c7b9c89"
-  integrity sha512-e4NG0Srsb5n877D/aNeOD9un09grxOILiHUaAw2BI1F5tAdLuph6AwU99Si+prj0TJ4WKZ2lyVifGP6SgvsVBg==
+ultimate_turbo_modal@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/ultimate_turbo_modal/-/ultimate_turbo_modal-1.5.0.tgz#65a860603ca78e2d55f16f30d029558bdf6ec242"
+  integrity sha512-Cs2DGpLtja+jCvpVCepb21B3UE00/m+4Vt8qqO8xSHXRkkEH7VTUOPB/Yp51hu0hX0tCHg4+kT/+w+Czh/b1sQ==
   dependencies:
     "@hotwired/stimulus" "^3.2.2"
     "@hotwired/turbo-rails" "^7.3.0"

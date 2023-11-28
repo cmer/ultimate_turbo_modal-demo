@@ -10,12 +10,14 @@
     "autoprefixer": "^10.4.16",
     "el-transition": "^0.0.7",
     "esbuild": "^0.19.5",
+    "flatpickr": "^4.6.13",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "postcss-nesting": "^12.0.1",
+    "stimulus-flatpickr": "^3.0.0-0",
     "tailwindcss": "^3.3.5",
-    "ultimate_turbo_modal": "^1.4.1"
+    "ultimate_turbo_modal": "^1.5.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
