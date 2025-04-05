@@ -122,14 +122,6 @@
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.2.2.tgz#071aab59c600fed95b97939e605ff261a4251608"
   integrity sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A==
 
-"@hotwired/turbo-rails@^7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-7.3.0.tgz#422c21752509f3edcd6c7b2725bbe9e157815f51"
-  integrity sha512-fvhO64vp/a2UVQ3jue9WTc2JisMv9XilIC7ViZmXAREVwiQ2S4UC7Go8f9A1j4Xu7DBI6SbFdqILk5ImqVoqyA==
-  dependencies:
-    "@hotwired/turbo" "^7.3.0"
-    "@rails/actioncable" "^7.0"
-
 "@hotwired/turbo-rails@^8.0.0":
   version "8.0.13"
   resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-8.0.13.tgz#7016651f7144053992ce5096bb95495f8faa5854"
@@ -137,11 +129,6 @@
   dependencies:
     "@hotwired/turbo" "^8.0.13"
     "@rails/actioncable" "^7.0"
-
-"@hotwired/turbo@^7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-7.3.0.tgz#2226000fff1aabda9fd9587474565c9929dbf15d"
-  integrity sha512-Dcu+NaSvHLT7EjrDrkEmH4qET2ZJZ5IcCWmNXxNQTBwlnE5tBZfN6WxZ842n5cHV52DH/AKNirbPBtcEXDLW4g==
 
 "@hotwired/turbo@^8.0.13":
   version "8.0.13"
@@ -966,14 +953,8 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-ultimate_turbo_modal@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/ultimate_turbo_modal/-/ultimate_turbo_modal-1.5.0.tgz#65a860603ca78e2d55f16f30d029558bdf6ec242"
-  integrity sha512-Cs2DGpLtja+jCvpVCepb21B3UE00/m+4Vt8qqO8xSHXRkkEH7VTUOPB/Yp51hu0hX0tCHg4+kT/+w+Czh/b1sQ==
-  dependencies:
-    "@hotwired/stimulus" "^3.2.2"
-    "@hotwired/turbo-rails" "^7.3.0"
-    el-transition "^0.0.7"
+"ultimate_turbo_modal@file:../ultimate_turbo_modal-rails/javascript":
+  version "0.0.0"
 
 universalify@^2.0.0:
   version "2.0.1"

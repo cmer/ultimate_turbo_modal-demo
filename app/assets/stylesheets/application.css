@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import 'ultimate_turbo_modal/dist/vanilla.css' layer(components);
+/* @import 'ultimate_turbo_modal/dist/vanilla.css' layer(components); */
 @import 'flatpickr/dist/flatpickr.css' layer(base);
 
 /* THIS IS IMPORTANT! Make sure we pick up Tailwind classes used by the Rubygem. */
