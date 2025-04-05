@@ -12,17 +12,17 @@
     <% end %>
     <div class="my-5">
       <%= form.label :title %>
-      <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      <%= form.text_field :title, class: "block shadow-sm rounded-md border border-gray-200 outline-hidden px-3 py-2 mt-2 w-full" %>
     </div>
     <div class="my-5">
       <%= form.label :body %>
-      <%= form.text_field :body, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      <%= form.text_field :body, class: "block shadow-sm rounded-md border border-gray-200 outline-hidden px-3 py-2 mt-2 w-full" %>
     </div>
     <div class="my-5">
       <%= form.label :publish_on %>
       <div class="text-xs">Modal will not close when clicking the calendar, even when outside of the modal boundaries.</div>
       <%= form.text_field :publish_on,
-          class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full",
+          class: "block shadow-sm rounded-md border border-gray-200 outline-hidden px-3 py-2 mt-2 w-full",
           data: {
             controller: "flatpickr",
             flatpickr_min_date: Date.current.strftime("%Y-%m-%d"),
