@@ -27,7 +27,7 @@ class HideFromBackendsController < ApplicationController
   end
 
   def form_is_valid?
-    return true if request[:action] == 'new'
+    return true if request.params[:action] == 'new'
     params[:email].present?
   end
   helper_method :form_is_valid?
