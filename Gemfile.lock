@@ -1,12 +1,3 @@
-PATH
-  remote: ../ultimate_turbo_modal-rails
-  specs:
-    ultimate_turbo_modal (2.0.0)
-      phlex-rails
-      rails
-      stimulus-rails
-      turbo-rails
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -206,6 +197,11 @@ GEM
       railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    ultimate_turbo_modal (2.0.0)
+      phlex-rails
+      rails
+      stimulus-rails
+      turbo-rails
     uri (1.0.3)
     useragent (0.16.11)
     web-console (4.2.1)
@@ -236,7 +232,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
-  ultimate_turbo_modal!
+  ultimate_turbo_modal (~> 2.0.0)
   web-console
 
 RUBY VERSION

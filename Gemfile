@@ -38,5 +38,4 @@ end
 gem "cssbundling-rails"
 gem "jsbundling-rails"
 gem "faker"
-# gem "ultimate_turbo_modal", "~> 1.5.0"
-gem "ultimate_turbo_modal", path: "../ultimate_turbo_modal-rails"
+gem "ultimate_turbo_modal", "~> 2.0.0"
