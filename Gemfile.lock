@@ -1,3 +1,12 @@
+PATH
+  remote: ../ultimate_turbo_modal-rails
+  specs:
+    ultimate_turbo_modal (2.0.0)
+      phlex-rails
+      rails
+      stimulus-rails
+      turbo-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,7 +89,7 @@ GEM
     concurrent-ruby (1.3.5)
     connection_pool (2.5.0)
     crass (1.0.6)
-    cssbundling-rails (1.3.3)
+    cssbundling-rails (1.4.3)
       railties (>= 6.0.0)
     date (3.4.1)
     debug (1.10.0)
@@ -197,11 +206,6 @@ GEM
       railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    ultimate_turbo_modal (1.5.0)
-      phlex-rails (>= 1.0, < 2.0)
-      rails (>= 7)
-      stimulus-rails
-      turbo-rails
     uri (1.0.3)
     useragent (0.16.11)
     web-console (4.2.1)
@@ -221,10 +225,10 @@ PLATFORMS
   arm64-darwin-24
 
 DEPENDENCIES
-  cssbundling-rails (~> 1.3.3)
+  cssbundling-rails
   debug
   faker
-  jsbundling-rails (~> 1.2)
+  jsbundling-rails
   propshaft
   puma (~> 6.6)
   rails (~> 8.0.2)
@@ -232,7 +236,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
-  ultimate_turbo_modal (~> 1.5.0)
+  ultimate_turbo_modal!
   web-console
 
 RUBY VERSION

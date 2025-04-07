@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 UltimateTurboModal.configure do |config|
-  config.close_button = true
-  config.padding = true
-  config.advance = true
   config.flavor = :tailwind
-  config.header = true
-  config.header_divider = true
-  config.footer_divider = true
-  config.allowed_click_outside_selector = ".flatpickr-calendar"
+  # config.close_button = true
+  # config.advance = true
+  # config.padding = true
+  # config.header = true
+  # config.header_divider = true
+  # config.footer_divider = true
+  # config.allowed_click_outside_selector = []
 end

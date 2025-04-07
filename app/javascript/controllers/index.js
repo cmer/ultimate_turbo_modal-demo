@@ -10,5 +10,6 @@ application.register("dark-mode", DarkModeController)
 import FlashController from "./flash_controller"
 application.register("flash", FlashController)
 
-import setupUltimateTurboModal from "ultimate_turbo_modal";
-setupUltimateTurboModal(application);
+import { UltimateTurboModalController } from "../../../../ultimate_turbo_modal-rails/javascript/dist/ultimate_turbo_modal.js"
+// import { UltimateTurboModalController } from "ultimate_turbo_modal"
+application.register("modal", UltimateTurboModalController)
