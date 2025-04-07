@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   # POST /posts
   def create
     @post = Post.new(post_params)
+    @modal_title = "New Post"
 
     if @post.save
       redirect_to "/",

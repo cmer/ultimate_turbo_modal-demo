@@ -1,10 +1,6 @@
 @import 'tailwindcss';
-/* @import 'ultimate_turbo_modal/dist/vanilla.css' layer(components); */
+@import 'ultimate_turbo_modal/dist/vanilla.css' layer(components);
 @import 'flatpickr/dist/flatpickr.css' layer(base);
-
-/* THIS IS IMPORTANT! Make sure we pick up Tailwind classes used by the Rubygem. */
-@config '../../../tailwind-utmr.config.js';
-
 
 @plugin '@tailwindcss/aspect-ratio';
 @plugin '@tailwindcss/forms';
@@ -28,4 +24,19 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+}
+
+#ts-notice:not(:empty) {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: auto;
+  border: 1px solid;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: black;
+  border-color: rgba(0, 148, 0, 0.8);
+  background-color: rgba(176, 255, 176, 0.6);
+  max-width: 32rem;
 }

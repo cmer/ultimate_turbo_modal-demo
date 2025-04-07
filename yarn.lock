@@ -543,6 +543,11 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
+idiomorph@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/idiomorph/-/idiomorph-0.7.3.tgz#50f9a30ce5bdb4a2937153b3cbca24b8a0361b95"
+  integrity sha512-YI/L1QQkBRDtiaGZN+/KolIkNoZuIsCgus1ciueosiqdyWz/weeP+ghFgDQpk2vzA3BkX6/M/kY5SCM03LBDkA==
+
 ignore@^5.2.4:
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
@@ -953,8 +958,15 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-"ultimate_turbo_modal@file:../ultimate_turbo_modal-rails/javascript":
-  version "0.0.0"
+ultimate_turbo_modal@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ultimate_turbo_modal/-/ultimate_turbo_modal-2.0.0.tgz#ed905dfb75705dde42524a705ef2472815fb8301"
+  integrity sha512-vxMwT+dBk1ZUlPiTgI4yy2QgWAnpPYlTuoxSJEOMLktlzal80QI7X9peOpyZaqXt54FauIhO2XAbIrBYjgNtbA==
+  dependencies:
+    "@hotwired/stimulus" "^3.2.2"
+    "@hotwired/turbo-rails" "^8.0.0"
+    el-transition "^0.0.7"
+    idiomorph "^0.7.3"
 
 universalify@^2.0.0:
   version "2.0.1"

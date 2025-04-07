@@ -12,12 +12,13 @@
     "el-transition": "^0.0.7",
     "esbuild": "^0.19.5",
     "flatpickr": "^4.6.13",
+    "idiomorph": "^0.7.3",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "stimulus-flatpickr": "^3.0.0-0",
     "tailwindcss": "^4.1.3",
-    "ultimate_turbo_modal": "file:../ultimate_turbo_modal-rails/javascript"
+    "ultimate_turbo_modal": "^2.0.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",

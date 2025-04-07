@@ -3,9 +3,9 @@ PATH
   specs:
     ultimate_turbo_modal (2.0.0)
       phlex-rails
-      rails (>= 7)
+      rails
       stimulus-rails
-      turbo-rails (>= 2.0)
+      turbo-rails
 
 GEM
   remote: https://rubygems.org/
