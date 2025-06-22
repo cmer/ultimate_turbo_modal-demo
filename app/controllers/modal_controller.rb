@@ -1,8 +1,8 @@
 class ModalController < ApplicationController
+  before_action :ensure_post_exists
   before_action :set_modal_properties
 
   def index
-    @post = Post.first
   end
 
   def show

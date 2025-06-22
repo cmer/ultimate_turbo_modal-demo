@@ -8,7 +8,7 @@ it in your own application at https://github.com/cmer/ultimate_turbo_modal.
 # Getting up and running...
 
 ```sh
-bin/rails db:create db:migrate db:seed
+bin/rails db:setup
 yarn install
 bin/dev
 open http://localhost:3000

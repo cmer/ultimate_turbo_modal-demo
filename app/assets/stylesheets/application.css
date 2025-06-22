@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import 'ultimate_turbo_modal/dist/vanilla.css' layer(components);
+@import '../../../../ultimate_turbo_modal/javascript/dist/vanilla.css' layer(components);
 @import 'flatpickr/dist/flatpickr.css' layer(base);
 
 @plugin '@tailwindcss/aspect-ratio';
@@ -39,4 +39,11 @@
   border-color: rgba(0, 148, 0, 0.8);
   background-color: rgba(176, 255, 176, 0.6);
   max-width: 32rem;
+}
+
+/* Disable buttons when form is submitting */
+button[type="submit"]:disabled,
+input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

@@ -29,8 +29,57 @@
           }
       %>
     </div>
-    <div class="inline">
-      <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <% if post.persisted? %>
+      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-4">
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-3">🧪 Choose Your Redirect Behavior:</h4>
+        
+        <div class="grid gap-3 mb-4">
+          <%= button_tag "💾 Save (stay on show page)", 
+              name: "redirect_to_same_page", value: "true", type: "submit", 
+              class: "rounded-lg py-3 px-5 bg-green-600 hover:bg-green-700 text-white font-medium cursor-pointer transition-colors",
+              title: "Same page redirect: show page content updates behind modal (5 seconds), then modal closes" %>
+          
+          <%= button_tag "💾 Save & go to index", 
+              name: "redirect_to_index", value: "true", type: "submit", 
+              class: "rounded-lg py-3 px-5 bg-blue-600 hover:bg-blue-700 text-white font-medium cursor-pointer transition-colors",
+              title: "Different page redirect: modal closes smoothly (3 seconds), then navigates to posts index" %>
+        </div>
+        
+        <div class="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+          <p><strong>🟢 Green button:</strong> Same-page redirect → Page content morphs behind modal → Modal closes after 5s</p>
+          <p><strong>🔵 Blue button:</strong> Different-page redirect → Modal closes over 3s → Navigates to index</p>
+        </div>
+      </div>
+    <% else %>
+      <div class="mb-4">
+        <%= button_tag "💾 Create Post", 
+            type: "submit", 
+            class: "w-full rounded-lg py-3 px-5 bg-green-600 hover:bg-green-700 text-white font-medium cursor-pointer transition-colors" %>
+      </div>
+    <% end %>
+    
+    <div class="border-t pt-4 text-sm">
+      <p class="mb-2 font-medium text-gray-700 dark:text-gray-300">Test frame-breaking navigation:</p>
+      <%= link_to "📋 View all posts", posts_path, class: "text-blue-600 hover:text-blue-800 underline", data: { turbo_frame: "_top" } %>
+      <span class="mx-2 text-gray-400">|</span>
+      <%= link_to "🏠 Go to home", "/", class: "text-blue-600 hover:text-blue-800 underline", data: { turbo_frame: "_top" } %>
+      <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">↑ These links break out of the modal frame and trigger smooth redirect behavior</p>
+    </div>
+  <% end %>
+
+  <!-- Delete Button - Only show for existing posts -->
+  <% if post.persisted? %>
+    <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+      <%= button_to post_path(post), 
+          method: :delete,
+          class: "w-full rounded-lg py-3 px-5 bg-red-600 hover:bg-red-700 text-white font-medium cursor-pointer transition-colors",
+          data: { 
+            confirm: "Are you sure you want to delete this post? This action cannot be undone.",
+            turbo_confirm: "Are you sure you want to delete this post? This action cannot be undone."
+          } do %>
+        🗑️ Delete Post
+      <% end %>
+      <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">⚠️ This will delete the post and redirect to the posts index (different-page redirect)</p>
     </div>
   <% end %>
 </div>

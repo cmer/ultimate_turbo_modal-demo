@@ -1,14 +1,70 @@
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Posts</h1>
-    <%= link_to 'New post', new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+<div class="mx-auto max-w-4xl px-4 py-8">
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      Ultimate Turbo Modal Demo
+    </h1>
+    <p class="text-lg text-gray-600 dark:text-gray-400">
+      Click any post to view → Edit/Delete from modal with smooth redirects
+    </p>
   </div>
 
-  <div id="posts" class="min-w-full">
-    <%= render @posts %>
+  <!-- Posts Grid -->
+  <div id="posts" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <% @posts.each do |post| %>
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow border">
+        <%= link_to post, class: "block p-6 h-full" do %>
+          <div class="mb-4">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
+              <%= post.title %>
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-3">
+              <%= post.body %>
+            </p>
+          </div>
+          
+          <div class="mt-auto">
+            <div class="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
+              <span>📅 <%= post.publish_on&.strftime("%b %d, %Y") || "No date" %></span>
+              <span class="text-blue-600 dark:text-blue-400 font-medium">Click to view →</span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- New Post Button -->
+  <div class="text-center mt-12">
+    <%= link_to new_post_path, 
+        class: "inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors",
+        data: { turbo_frame: "modal" } do %>
+      ➕ Create New Post
+    <% end %>
+  </div>
+
+  <!-- Instructions -->
+  <div class="mt-16 bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">How to Test:</h3>
+    <ol class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+      <li><strong>1.</strong> Click any post to view it</li>
+      <li><strong>2.</strong> Click "Edit" to open the modal</li>
+      <li><strong>3.</strong> Try different save options to see smooth redirect behavior</li>
+    </ol>
   </div>
 </div>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

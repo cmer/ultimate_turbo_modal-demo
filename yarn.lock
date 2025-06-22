@@ -958,10 +958,8 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-ultimate_turbo_modal@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ultimate_turbo_modal/-/ultimate_turbo_modal-2.0.0.tgz#ed905dfb75705dde42524a705ef2472815fb8301"
-  integrity sha512-vxMwT+dBk1ZUlPiTgI4yy2QgWAnpPYlTuoxSJEOMLktlzal80QI7X9peOpyZaqXt54FauIhO2XAbIrBYjgNtbA==
+"ultimate_turbo_modal@file:../ultimate_turbo_modal/javascript":
+  version "2.0.4"
   dependencies:
     "@hotwired/stimulus" "^3.2.2"
     "@hotwired/turbo-rails" "^8.0.0"

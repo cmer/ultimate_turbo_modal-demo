@@ -1,21 +1,64 @@
-<%= modal(padding: @padding, advance: @override_url || @advance, title: @modal_title, close_button: @close_button) do |m| %>
-  <%= m.title do %>
-    <div>Custom Header Block</div>
-  <% end %>
-
-  <div class="max-w-3xl">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+<div class="mx-auto max-w-3xl px-4 py-8">
+  <!-- Navigation -->
+  <div class="mb-6">
+    <%= link_to posts_path, class: "inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" do %>
+      ← Back to Posts
     <% end %>
-
-    <%= render @post %>
   </div>
 
-  <%= m.footer do %>
-    <%= link_to 'Edit this post', edit_post_path(@post), class: "rounded-lg py-3 px-5 bg-blue-800 text-white inline-block font-medium" %>
+  <!-- Post Content -->
+  <article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg border p-8">
+    <!-- Header with timestamp -->
+    <header class="mb-8 border-b border-gray-200 dark:border-gray-700 pb-6">
+      <div class="flex justify-between items-start mb-4">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
+          <%= @post.title %>
+        </h1>
+        <span class="text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
+          Last updated: <%= @post.updated_at.strftime("%H:%M:%S") %>
+        </span>
+      </div>
+      
+      <div class="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400">
+        <span>📅 <%= @post.publish_on&.strftime("%B %d, %Y") || "No publish date set" %></span>
+        <span>🆔 Post #<%= @post.id %></span>
+      </div>
+    </header>
 
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this post', post_path(@post), method: :delete, class: "py-3 px-5 bg-transparent text-red-600" %>
+    <!-- Post Body -->
+    <div class="prose dark:prose-invert max-w-none mb-8">
+      <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+        <%= @post.body %>
+      </p>
     </div>
-  <% end %>
-<% end %>
+
+    <!-- Actions Section -->
+    <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
+
+      <div class="flex flex-wrap gap-4">
+        <!-- Edit Button -->
+        <%= link_to edit_post_path(@post), 
+            class: "inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-sm",
+            data: { turbo_frame: "modal" } do %>
+          ✏️ Edit Post
+        <% end %>
+
+
+        <!-- Back to Index -->
+        <%= link_to posts_path, 
+            class: "inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors shadow-sm" do %>
+          📋 Back to All Posts
+        <% end %>
+      </div>
+
+      <!-- Behavior Explanation -->
+      <div class="mt-6 text-sm text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+        <p class="font-medium mb-2">Expected Behaviors:</p>
+        <ul class="space-y-1 text-xs">
+          <li><strong>✏️ Edit:</strong> Opens modal → Save options OR Delete → Same page = morphs this page behind modal, Different page = navigates to index</li>
+          <li><strong>🗑️ Delete:</strong> Available in edit modal → Requires confirmation → Redirects to index with success message</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</div>
